@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
+import { MdEditSquare } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 
 const Container = () => {
@@ -79,7 +81,7 @@ const Container = () => {
 
 
   return (
-    <div className='Container bg-violet-100 text-center mt-6  mx-64 p-6 rounded-xl min-h-[85vh]'>
+    <div className='Container bg-violet-100 text-center mt-6  mx-64 p-6 rounded-xl min-h-[85vh] w-1/2'>
       {/* heading */}
       <h1 className='text-black text-2xl my-6 font-bold'>iTask - Manage your ToDo at one place</h1>
       <h2 className='flex justify-items-start'>Add a Todo</h2>
@@ -91,9 +93,9 @@ const Container = () => {
           value={item}
           type="text"
           placeholder='Add task'
-          className='bg-blue-300 w-3/4 p-2 mr-3 my-1 text-black rounded-2xl ' />
+          className='bg-blue-300  p-2 mx-3 my-1 text-black rounded-2xl w-full' />
 
-        <button onClick={handleAdd} className='bg-blue-700 hover:bg-blue-900  p-2 mx-2 my-1 text-white rounded-2xl font-bold'>Save</button>
+        <button onClick={handleAdd} className='bg-blue-700 hover:bg-blue-900  p-2 mx-3 my-1 text-white rounded-2xl font-bold w-full'>Save</button>
       </div>
 
       {/* to show task */}
@@ -116,8 +118,8 @@ const Container = () => {
               <span className='ml-2'>{todo.item}</span>
             </div>
             <div className='flex h-full'>
-              <button onClick={(e) => { handleEdit(e, todo.id) }} className='bg-blue-700 hover:bg-blue-900 p-2 mx-2 my-1 text-white rounded-2xl font-bold'>Edit</button>
-              <button onClick={(e) => { handleDelete(e, todo.id) }} className='bg-blue-700 hover:bg-blue-900 p-2 mx-2 my-1 text-white rounded-2xl font-bold'>Delete</button>
+              <button onClick={(e) => { handleEdit(e, todo.id) }} className='bg-blue-700 hover:bg-blue-900 p-2 mx-2 my-1 text-white rounded-2xl font-bold'><MdEditSquare /></button>
+              <button onClick={(e) => { handleDelete(e, todo.id) }} className='bg-blue-700 hover:bg-blue-900 p-2 mx-2 my-1 text-white rounded-2xl font-bold'><MdDelete /></button>
             </div>
 
           </div>
