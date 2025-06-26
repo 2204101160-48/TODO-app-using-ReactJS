@@ -81,7 +81,7 @@ const Container = () => {
 
 
   return (
-    <div className='Container bg-violet-100 text-center mt-6  mx-64 p-6 rounded-xl min-h-[85vh] w-1/2'>
+    <div className=' md:mx-auto md:Container bg-violet-100 text-center mt-6   p-6 rounded-xl min-h-[85vh] md:w-1/2'>
       {/* heading */}
       <h1 className='text-black text-2xl my-6 font-bold'>iTask - Manage your ToDo at one place</h1>
       <h2 className='flex justify-items-start'>Add a Todo</h2>
@@ -99,7 +99,7 @@ const Container = () => {
       </div>
 
       {/* to show task */}
-      <p className='flex justify-items-start my-6'>show Finished</p>
+      {/* <p className='flex justify-items-start my-6'>show Finished</p> */}
 
       {/* to edit and delete task */}
       <h2 className='flex justify-items-start mb-3 font-bold'>Your Todos</h2>
